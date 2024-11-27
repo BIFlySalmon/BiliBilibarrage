@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'"
+  />
+  <meta
+    http-equiv="X-Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'"
+  />
+  <title>Bilibili 弹幕发送姬 - 牢饼特供</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h1>Bilibili 弹幕发送姬</h1>
+  <div>
+    <label for="roomid">直播间 ID:</label>
+    <input id="roomid" type="text" value="29005659" />
+    <label for="message">弹幕内容:</label>
+    <input id="message" type="text" value="豪庭~" />
+    <label for="speed">间隔时间(推荐不少于5):</label>
+    <input id="speed" type="text" value="5" />
+  </div>
+  <div>
+    <h2>登录凭证</h2>
+    <div id="tokensContainer">
+      <!-- 第一个默认凭证组 -->
+      <div class="tokenGroup">
+        <label for="bili_jct_0">bili_jct:</label>
+        <input id="bili_jct_0" type="password" />
+        <label for="sessdata_0">SESSDATA:</label>
+        <input id="sessdata_0" type="password" />
+      </div>
+    </div>
+    <br>
+    <button id="addToken">添加登录凭证</button>
+    <br><br>
+    <span>先保存再发送哦~</span><br>
+  </div>
+  <div>
+    <button id="saveInfo">保存</button>
+    <button id="startSend">开始发送</button>
+    <button id="stopSend">停止发送</button>
+  </div>
+  <br><hr>
+  <span>
+    登录凭证获取方式：<br>
+    <span id="warningSpan">
+      切勿将凭证给与他人!!!<br>
+      切勿将凭证给与他人!!!<br>
+      切勿将凭证给与他人!!!<br>
+    </span>
+    1.浏览器打开b站登录账号，按F12打开开发者工具<br>
+    2.选择顶部"应用"->cookie->https://www.bilibili.com<br>
+    3.右侧列表中即可找到SESSDATA和bili_jct字段<br>
+    4.多个账号可以添加多个凭证，保存开始后会每轮全部发送一遍<br>
+    <img id="yanshitu" src="./1.png" alt="图片丢失"><br>
+  </span>
+  <script src="./index.js"></script>r
+</body>
+</html>

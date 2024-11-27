@@ -1,0 +1,46 @@
+#yanshitu{
+    width: 600px;
+    height: auto;
+}
+body{
+    color: rgb(255, 112, 153);
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    
+}
+img{
+    pointer-events: none;
+}
+
+#warningSpan{
+    color: rgb(0, 176, 234);
+    font-size: 20px;
+}
+
+button{
+    background-color: rgb(255, 112, 153);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 7px 10px 7px 10px;
+}
+
+button:disabled {
+    background-color: lightgray;
+}
+
+input{
+    border-style: solid;
+    border-color: rgb(255, 112, 153);
+    border-radius: 5px;
+    padding: 4px 3px 4px 3px;
+}
+
+input:focus {
+    outline: none;  /* 移除默认的边框 */
+    box-shadow: 0 0 10px rgb(255, 186, 201);
+}
